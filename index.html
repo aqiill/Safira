@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Seventeen Safira - Invitation</title>
+
+    <meta name="title" content="Invitation — Sweet Seventeen Safira" />
+    <meta
+      name="description"
+      content="Sweet Seventeen Safira
+    Hari/Tgl : Sabtu , 9 Agustus 2025
+    Pukul : 18.45 Wib s/d selesai
+    Tempat : Ruang VIP Bebek Ngalau, Payakumbuh"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://safira.kojolah.com/" />
+    <meta property="og:title" content="Invitation — Sweet Seventeen Safira" />
+    <meta
+      property="og:description"
+      content="Sweet Seventeen Safira
+    Hari/Tgl : Sabtu , 9 Agustus 2025
+    Pukul : 18.45 Wib s/d selesai
+    Tempat : Ruang VIP Bebek Ngalau, Payakumbuh"
+    />
+    <meta property="og:image" content="safira2.JPG" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://safira.kojolah.com/" />
+    <meta
+      property="twitter:title"
+      content="Invitation — Sweet Seventeen Safira"
+    />
+    <meta
+      property="twitter:description"
+      content="Sweet Seventeen Safira
+    Hari/Tgl : Sabtu , 9 Agustus 2025
+    Pukul : 18.45 Wib s/d selesai
+    Tempat : Ruang VIP Bebek Ngalau, Payakumbuh"
+    />
+    <meta property="twitter:image" content="safira2.JPG" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffccd5);
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      /* Floating decorations */
+      .decoration {
+        position: fixed;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .heart1 {
+        top: 10%;
+        left: 5%;
+        font-size: 2rem;
+        color: #ff69b4;
+        animation: float 4s ease-in-out infinite;
+      }
+      .heart2 {
+        top: 20%;
+        right: 10%;
+        font-size: 1.5rem;
+        color: #ff1493;
+        animation: float 3s ease-in-out infinite 1s;
+      }
+      .star1 {
+        top: 60%;
+        left: 8%;
+        font-size: 1.8rem;
+        color: #ffd700;
+        animation: twinkle 2s infinite;
+      }
+      .star2 {
+        top: 80%;
+        right: 5%;
+        font-size: 1.2rem;
+        color: #ffd700;
+        animation: twinkle 2.5s infinite 0.5s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(5deg);
+        }
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.5;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+
+      /* Section styling */
+      .section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        position: relative;
+        transition: transform 0.3s ease;
+      }
+
+      .container {
+        max-width: 600px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 3rem 2rem;
+        border-radius: 30px;
+        box-shadow: 0 20px 40px rgba(255, 105, 180, 0.3);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 182, 193, 0.5);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 192, 203, 0.1) 0%,
+          transparent 70%
+        );
+        animation: shimmer 6s linear infinite;
+      }
+
+      @keyframes shimmer {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Opening section */
+      .opening h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 3.5rem;
+        color: #ff1493;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+      }
+
+      .opening h2 {
+        font-size: 1.8rem;
+        color: #ff69b4;
+        margin-bottom: 2rem;
+      }
+
+      .guest-name {
+        font-family: "Dancing Script", cursive;
+        font-size: 2.5rem;
+        color: #ff1493;
+        background: linear-gradient(45deg, #ff69b4, #ff1493);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 1rem 0;
+      }
+
+      /* Birthday girl image */
+      .birthday-girl {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 2rem auto;
+        background: linear-gradient(45deg, #ff69b4, #ffc0cb);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+        color: white;
+        box-shadow: 0 15px 30px rgba(255, 105, 180, 0.4);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      /* Event details */
+      .event-details h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 3rem;
+        color: #ff1493;
+        margin-bottom: 2rem;
+      }
+
+      .detail-item {
+        margin: 1.5rem 0;
+        padding: 1rem;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 182, 193, 0.3),
+          rgba(255, 192, 203, 0.3)
+        );
+        border-radius: 15px;
+        border-left: 5px solid #ff69b4;
+      }
+
+      .detail-item i {
+        color: #ff1493;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+
+      .detail-item h3 {
+        color: #ff1493;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .detail-item p {
+        color: #666;
+        font-size: 1rem;
+      }
+
+      /* Map container */
+      .map-container {
+        margin: 2rem 0;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+      }
+
+      /* Prayer section */
+      .prayer {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 182, 193, 0.9),
+          rgba(255, 240, 245, 0.9)
+        );
+      }
+
+      .prayer h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 2.8rem;
+        color: #ff1493;
+        margin-bottom: 2rem;
+      }
+
+      .prayer-text {
+        font-style: italic;
+        color: #666;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        padding: 2rem;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+        position: relative;
+      }
+
+      .prayer-text::before,
+      .prayer-text::after {
+        content: '"';
+        font-size: 4rem;
+        color: #ffc0cb;
+        position: absolute;
+        font-family: serif;
+      }
+
+      .prayer-text::before {
+        top: -10px;
+        left: 10px;
+      }
+
+      .prayer-text::after {
+        bottom: -40px;
+        right: 10px;
+      }
+
+      /* Gallery */
+      .gallery h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 2.8rem;
+        color: #ff1493;
+        margin-bottom: 2rem;
+      }
+
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+
+      .photo-item {
+        aspect-ratio: 1;
+        background: linear-gradient(45deg, #ff69b4, #ffc0cb, #ffb6c1);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
+        transition: transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .photo-item:hover {
+        transform: scale(1.05) rotate(2deg);
+      }
+
+      .photo-item i {
+        font-size: 3rem;
+        color: white;
+      }
+
+      .photo-item::after {
+        content: attr(data-age);
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        color: #ff1493;
+        font-weight: 600;
+      }
+
+      /* RSVP Section */
+      .rsvp h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 2.8rem;
+        color: #ff1493;
+        margin-bottom: 2rem;
+      }
+
+      .rsvp-button {
+        display: inline-block;
+        background: linear-gradient(45deg, #25d366, #128c7e);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        transition: all 0.3s ease;
+        margin: 1rem;
+      }
+
+      .rsvp-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(37, 211, 102, 0.6);
+      }
+
+      .rsvp-button i {
+        margin-right: 0.5rem;
+      }
+
+      .closing-message {
+        margin-top: 2rem;
+        color: #666;
+        font-style: italic;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .section {
+          padding: 1rem;
+          min-height: 100vh;
+        }
+
+        .container {
+          padding: 2rem 1.5rem;
+          margin: 1rem;
+        }
+
+        .opening h1 {
+          font-size: 2.5rem;
+        }
+
+        .guest-name {
+          font-size: 2rem;
+        }
+
+        .birthday-girl {
+          width: 150px;
+          height: 150px;
+          font-size: 3rem;
+        }
+
+        .photo-grid {
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+
+        .decoration {
+          display: none;
+        }
+      }
+
+      /* Scroll zoom effects */
+      .zoom-in {
+        transform: scale(1.1);
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .fade-in.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Floating decorations -->
+    <div class="decoration heart1"><i class="fas fa-heart"></i></div>
+    <div class="decoration heart2"><i class="fas fa-heart"></i></div>
+    <div class="decoration star1"><i class="fas fa-star"></i></div>
+    <div class="decoration star2"><i class="fas fa-star"></i></div>
+
+    <!-- Opening Section -->
+    <section class="section opening">
+      <div class="container fade-in">
+        <h1><i class="fas fa-birthday-cake"></i> Sweet Seventeen</h1>
+        <div class="birthday-girl">
+          <i class="fas fa-crown"></i>
+        </div>
+        <h2>Dear</h2>
+        <div class="guest-name" id="guestName">Beautiful Guest</div>
+        <p style="color: #666; font-size: 1.1rem; margin-top: 2rem">
+          Dengan penuh kebahagiaan, kami mengundang <br />
+          Teman-teman untuk merayakan momen istimewa <br />
+          ulang tahun ke-17
+        </p>
+        <div style="margin-top: 2rem">
+          <i
+            class="fas fa-scroll"
+            style="color: #ff69b4; font-size: 1.5rem"
+          ></i>
+          <p style="color: #ff1493; font-weight: 600; margin-top: 1rem">
+            Scroll down untuk melihat detail acara
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="section event-details">
+      <div class="container fade-in">
+        <h2><i class="fas fa-calendar-heart"></i> Detail Acara</h2>
+
+        <div class="detail-item">
+          <i class="fas fa-user-crown"></i>
+          <h3>Nama</h3>
+          <p>Princess Safira Cantik</p>
+        </div>
+
+        <div class="detail-item">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Tanggal & Hari</h3>
+          <p>Sabtu, 9 Agustus 2025</p>
+        </div>
+
+        <div class="detail-item">
+          <i class="fas fa-clock"></i>
+          <h3>Waktu</h3>
+          <p>18:45 WIB - Selesai</p>
+        </div>
+
+        <div class="detail-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Lokasi</h3>
+          <p>
+            Ruang VIP<br />
+            Bebek Ngalau, Payakumbuh
+          </p>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.326275305655!2d100.6099168!3d-0.2540057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd54b0040518001%3A0x1a4ec8ce017b27c5!2sBEBEK%20NGALAU!5e1!3m2!1sid!2sid!4v1753798564878!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prayer Section -->
+    <section class="section prayer">
+      <div class="container fade-in">
+        <h2><i class="fas fa-hands-praying"></i> Doa & Harapan</h2>
+        <div class="prayer-text">
+          Semoga di usia yang ke-17 ini, kami semakin diberkahi dengan
+          kesehatan, kebahagiaan, dan kesuksesan dalam menggapai cita-cita.
+          Semoga setiap langkahnya selalu dalam lindungan Yang Maha Kuasa, dan
+          semoga menjadi anak yang berbakti serta bermanfaat bagi orang lain.
+        </div>
+        <div style="margin-top: 2rem">
+          <i class="fas fa-heart" style="color: #ff69b4; margin: 0 0.5rem"></i>
+          <i class="fas fa-star" style="color: #ffd700; margin: 0 0.5rem"></i>
+          <i class="fas fa-heart" style="color: #ff69b4; margin: 0 0.5rem"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery">
+      <div class="container fade-in">
+        <h2><i class="fas fa-images"></i> Galeri Kenangan</h2>
+        <p style="color: #666; margin-bottom: 2rem">
+          Perjalanan manis dari kecil hingga kini
+        </p>
+
+        <div class="photo-grid">
+          <div class="photo-item" data-age="Baby">
+            <img src="safira1.JPG" />
+          </div>
+          <div class="photo-item" data-age="5 Tahun">
+            <img src="safira1.JPG" />
+          </div>
+          <div class="photo-item" data-age="10 Tahun">
+            <img src="safira1.JPG" />
+          </div>
+          <div class="photo-item" data-age="15 Tahun">
+            <img src="safira2.JPG" />
+          </div>
+          <div class="photo-item" data-age="16 Tahun">
+            <img src="safira2.JPG" />
+          </div>
+          <div class="photo-item" data-age="Now">
+            <img src="safira2.JPG" />
+          </div>
+        </div>
+
+        <p style="color: #ff69b4; font-style: italic; margin-top: 2rem">
+          "Setiap foto menyimpan cerita indah perjalanan hidupku" 💕
+        </p>
+      </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="section rsvp">
+      <div class="container fade-in">
+        <h2><i class="fas fa-envelope-heart"></i> RSVP</h2>
+        <p style="color: #666; margin-bottom: 2rem; font-size: 1.1rem">
+          Kehadiran Teman-teman akan melengkapi kebahagiaan kami di momen
+          istimewa ini
+        </p>
+
+        <a
+          href="https://wa.me/6282268917091?text=Halo,%20saya%20ingin%20konfirmasi%20kehadiran%20untuk%20acara%20Sweet%20Seventeen%20Princess%20Safira"
+          class="rsvp-button"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i>
+          Konfirmasi Kehadiran
+        </a>
+
+        <div class="closing-message">
+          <p style="margin-top: 2rem; color: #ff69b4; font-size: 1.1rem">
+            "Terima kasih atas doa dan kehadiran Teman-teman yang sangat berarti
+            bagi kami"
+          </p>
+          <div style="margin-top: 1rem">
+            <i
+              class="fas fa-heart"
+              style="color: #ff1493; animation: pulse 1s infinite"
+            ></i>
+            <span style="color: #ff69b4; font-weight: 600; margin: 0 1rem">
+              Dengan Cinta, Keluarga Safira
+            </span>
+            <i
+              class="fas fa-heart"
+              style="color: #ff1493; animation: pulse 1s infinite"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Get guest name from URL parameter
+      function getGuestName() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestName = urlParams.get("to");
+        if (guestName) {
+          document.getElementById("guestName").textContent = guestName;
+        }
+      }
+
+      // Scroll animations
+      function handleScrollAnimations() {
+        const sections = document.querySelectorAll(".fade-in");
+        const windowHeight = window.innerHeight;
+
+        sections.forEach((section) => {
+          const sectionTop = section.getBoundingClientRect().top;
+          const sectionBottom = section.getBoundingClientRect().bottom;
+
+          // Fade in animation
+          if (sectionTop < windowHeight * 0.8 && sectionBottom > 0) {
+            section.classList.add("active");
+          }
+
+          // Zoom effect based on scroll position
+          const container = section.querySelector(".container") || section;
+          if (
+            sectionTop < windowHeight * 0.5 &&
+            sectionBottom > windowHeight * 0.5
+          ) {
+            const progress = Math.max(
+              0,
+              Math.min(1, (windowHeight * 0.5 - sectionTop) / windowHeight)
+            );
+            const scale = 1 + progress * 0.1;
+            container.style.transform = `scale(${scale})`;
+          } else {
+            container.style.transform = "scale(1)";
+          }
+        });
+      }
+
+      // Floating hearts animation
+      function createFloatingHearts() {
+        const hearts = ["💖", "💕", "💗", "🌸", "⭐", "✨"];
+
+        setInterval(() => {
+          if (Math.random() > 0.7) {
+            const heart = document.createElement("div");
+            heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.position = "fixed";
+            heart.style.left = Math.random() * 100 + "%";
+            heart.style.top = "100%";
+            heart.style.fontSize = "1.5rem";
+            heart.style.pointerEvents = "none";
+            heart.style.zIndex = "999";
+            heart.style.animation = "floatUp 4s linear forwards";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+              if (heart.parentNode) {
+                heart.parentNode.removeChild(heart);
+              }
+            }, 4000);
+          }
+        }, 2000);
+      }
+
+      // Add floating animation CSS
+      const style = document.createElement("style");
+      style.textContent = `
+            @keyframes floatUp {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+      document.head.appendChild(style);
+
+      // Smooth scroll for mobile
+      function smoothScroll() {
+        let isScrolling = false;
+
+        window.addEventListener("scroll", () => {
+          if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+              handleScrollAnimations();
+              isScrolling = false;
+            });
+            isScrolling = true;
+          }
+        });
+      }
+
+      // Initialize everything
+      document.addEventListener("DOMContentLoaded", () => {
+        getGuestName();
+        handleScrollAnimations();
+        createFloatingHearts();
+        smoothScroll();
+
+        // Add some initial delay for first section
+        setTimeout(() => {
+          document.querySelector(".opening .fade-in").classList.add("active");
+        }, 500);
+      });
+
+      // Add touch events for mobile
+      let touchStartY = 0;
+      document.addEventListener("touchstart", (e) => {
+        touchStartY = e.touches[0].clientY;
+      });
+
+      document.addEventListener("touchmove", (e) => {
+        const touchY = e.touches[0].clientY;
+        const diffY = touchStartY - touchY;
+
+        if (Math.abs(diffY) > 50) {
+          handleScrollAnimations();
+        }
+      });
+    </script>
+  </body>
+</html>
