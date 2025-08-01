@@ -61,6 +61,66 @@
         background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffccd5);
         overflow-x: hidden;
         scroll-behavior: smooth;
+        overflow-y: hidden; /* Initially hide scroll to show overlay */
+      }
+
+      /* Welcome Overlay Styling */
+      #welcome-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffccd5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        text-align: center;
+        transition: opacity 1s ease;
+        padding: 1rem;
+      }
+
+      .overlay-content {
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .overlay-content h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 4rem;
+        color: #ff1493;
+        margin-bottom: 0.5rem;
+      }
+
+      .overlay-content h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem;
+        color: #ff69b4;
+        margin-bottom: 2rem;
+      }
+
+      #open-invitation-btn {
+        background: linear-gradient(45deg, #ff69b4, #ff1493);
+        color: white;
+        border: none;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(255, 105, 180, 0.4);
+        transition: all 0.3s ease;
+        font-family: "Poppins", sans-serif;
+      }
+
+      #open-invitation-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(255, 105, 180, 0.6);
+      }
+
+      #open-invitation-btn i {
+        margin-right: 0.5rem;
       }
 
       /* Floating decorations */
@@ -436,6 +496,17 @@
 
       /* Responsive design */
       @media (max-width: 768px) {
+        .overlay-content h1 {
+          font-size: 3rem;
+        }
+        .overlay-content h2 {
+          font-size: 1.2rem;
+        }
+        #open-invitation-btn {
+          padding: 0.8rem 2rem;
+          font-size: 1rem;
+        }
+
         .section {
           padding: 1rem;
           min-height: 100vh;
@@ -502,13 +573,27 @@
     </style>
   </head>
   <body>
-    <!-- Floating decorations -->
+    <audio id="background-music" loop>
+      <source src="Everytime.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <div id="welcome-overlay">
+      <div class="overlay-content">
+        <h2>You are cordially invited to</h2>
+        <h1>Sweet Seventeen</h1>
+        <h2>Princess Safira Cantik</h2>
+        <button id="open-invitation-btn">
+          <i class="fas fa-envelope-open-text"></i> Buka Undangan
+        </button>
+      </div>
+    </div>
+
     <div class="decoration heart1"><i class="fas fa-heart"></i></div>
     <div class="decoration heart2"><i class="fas fa-heart"></i></div>
     <div class="decoration star1"><i class="fas fa-star"></i></div>
     <div class="decoration star2"><i class="fas fa-star"></i></div>
 
-    <!-- Opening Section -->
     <section class="section opening">
       <div class="container fade-in">
         <h1><i class="fas fa-birthday-cake"></i> Sweet Seventeen</h1>
@@ -518,9 +603,8 @@
         <h2>Dear</h2>
         <div class="guest-name" id="guestName">Beautiful Guest</div>
         <p style="color: #666; font-size: 1.1rem; margin-top: 2rem">
-          Dengan penuh kebahagiaan, kami mengundang <br />
-          Teman-teman untuk merayakan momen istimewa <br />
-          ulang tahun ke-17
+          Dengan penuh sukacita, Safira mengundangmu untuk hadir dan merayakan
+          momen istimewa ini
         </p>
         <div style="margin-top: 2rem">
           <i
@@ -534,7 +618,6 @@
       </div>
     </section>
 
-    <!-- Event Details Section -->
     <section class="section event-details">
       <div class="container fade-in">
         <h2><i class="fas fa-calendar-heart"></i> Detail Acara</h2>
@@ -566,6 +649,12 @@
           </p>
         </div>
 
+        <div class="detail-item">
+          <i class="fa-solid fa-shirt"></i>
+          <h3>Dresscode</h3>
+          <p>Sentuhan warna Pink, Putih</p>
+        </div>
+
         <div class="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.326275305655!2d100.6099168!3d-0.2540057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd54b0040518001%3A0x1a4ec8ce017b27c5!2sBEBEK%20NGALAU!5e1!3m2!1sid!2sid!4v1753798564878!5m2!1sid!2sid"
@@ -576,15 +665,21 @@
       </div>
     </section>
 
-    <!-- Prayer Section -->
     <section class="section prayer">
       <div class="container fade-in">
         <h2><i class="fas fa-hands-praying"></i> Doa & Harapan</h2>
         <div class="prayer-text">
-          Semoga di usia yang ke-17 ini, kami semakin diberkahi dengan
-          kesehatan, kebahagiaan, dan kesuksesan dalam menggapai cita-cita.
-          Semoga setiap langkahnya selalu dalam lindungan Yang Maha Kuasa, dan
-          semoga menjadi anak yang berbakti serta bermanfaat bagi orang lain.
+          Pada tanggal 7 Agustus 2008, lahirlah seorang anak bernama Ni Made
+          Safira Dwi Anjani, putri kedua dari pasangan Ibu Ni Made Dessy
+          Trisnawati dan Bapak I Gede Eka Budhiyadnya.
+          <br />
+          Sejak kecil, Safira dikenal sebagai sosok yang multitalenta. Ia aktif
+          mengembangkan minat dan bakatnya hingga mampu menorehkan berbagai
+          prestasi membanggakan.
+          <br />
+          Kini, di usianya yang ke-17 — usia di mana seseorang mulai menapaki
+          gerbang dunia yang sesungguhnya — Safira ingin berbagi kebahagiaannya
+          bersama orang-orang terdekat.
         </div>
         <div style="margin-top: 2rem">
           <i class="fas fa-heart" style="color: #ff69b4; margin: 0 0.5rem"></i>
@@ -594,7 +689,6 @@
       </div>
     </section>
 
-    <!-- Gallery Section -->
     <section class="section gallery">
       <div class="container fade-in">
         <h2><i class="fas fa-images"></i> Galeri Kenangan</h2>
@@ -604,22 +698,22 @@
 
         <div class="photo-grid">
           <div class="photo-item" data-age="Baby">
-            <img src="safira1.JPG" alt="Safira Photo" />
+            <img src="1.JPG" alt="Safira Photo" />
           </div>
           <div class="photo-item" data-age="5 Tahun">
-            <img src="safira1.JPG" alt="Safira Photo" />
+            <img src="2.JPG" alt="Safira Photo" />
           </div>
           <div class="photo-item" data-age="10 Tahun">
-            <img src="safira1.JPG" alt="Safira Photo" />
+            <img src="3.JPG" alt="Safira Photo" />
           </div>
           <div class="photo-item" data-age="15 Tahun">
-            <img src="safira2.JPG" alt="Safira Photo" />
+            <img src="4.JPG" alt="Safira Photo" />
           </div>
           <div class="photo-item" data-age="16 Tahun">
-            <img src="safira2.JPG" alt="Safira Photo" />
+            <img src="5.JPG" alt="Safira Photo" />
           </div>
           <div class="photo-item" data-age="Now">
-            <img src="safira2.JPG" alt="Safira Photo" />
+            <img src="6.JPG" alt="Safira Photo" />
           </div>
         </div>
 
@@ -629,7 +723,6 @@
       </div>
     </section>
 
-    <!-- RSVP Section -->
     <section class="section rsvp">
       <div class="container fade-in">
         <h2><i class="fas fa-envelope-heart"></i> RSVP</h2>
@@ -651,8 +744,7 @@
 
         <div class="closing-message">
           <p style="margin-top: 2rem; color: #ff69b4; font-size: 1.1rem">
-            "Terima kasih atas doa dan kehadiran Teman-teman yang sangat berarti
-            bagi kami"
+            "Let’s celebrate the sweetest chapter of Safira’s life! 💖 "
           </p>
           <div style="margin-top: 1rem">
             <i
@@ -660,7 +752,7 @@
               style="color: #ff1493; animation: pulse 1s infinite"
             ></i>
             <span style="color: #ff69b4; font-weight: 600; margin: 0 1rem">
-              Dengan Cinta, Keluarga Safira
+              See you there! 🌸
             </span>
             <i
               class="fas fa-heart"
@@ -744,17 +836,17 @@
       // Add floating animation CSS
       const style = document.createElement("style");
       style.textContent = `
-            @keyframes floatUp {
-                0% {
-                    transform: translateY(0) rotate(0deg);
-                    opacity: 1;
-                }
-                100% {
-                    transform: translateY(-120vh) rotate(360deg);
-                    opacity: 0;
-                }
-            }
-        `;
+              @keyframes floatUp {
+                  0% {
+                      transform: translateY(0) rotate(0deg);
+                      opacity: 1;
+                  }
+                  100% {
+                      transform: translateY(-120vh) rotate(360deg);
+                      opacity: 0;
+                  }
+              }
+          `;
       document.head.appendChild(style);
 
       // Smooth scroll for mobile
@@ -786,16 +878,38 @@
       // Initialize everything
       document.addEventListener("DOMContentLoaded", () => {
         console.log("Page loaded");
+
+        // --- NEW LOGIC FOR OVERLAY AND MUSIC ---
+        const openButton = document.getElementById("open-invitation-btn");
+        const overlay = document.getElementById("welcome-overlay");
+        const music = document.getElementById("background-music");
+
+        openButton.addEventListener("click", () => {
+          // Play music
+          music.play().catch((error) => {
+            console.log("Audio play was prevented by the browser:", error);
+          });
+
+          // Fade out and hide the overlay
+          overlay.style.opacity = "0";
+          setTimeout(() => {
+            overlay.style.display = "none";
+          }, 1000); // This should match the transition duration in the CSS
+
+          // Enable scrolling on the body
+          document.body.style.overflowY = "auto";
+
+          // Manually trigger the first section's animation
+          document.querySelector(".opening .fade-in").classList.add("active");
+        });
+
+        // --- END OF NEW LOGIC ---
+
         getGuestName();
-        handleScrollAnimations();
+        handleScrollAnimations(); // Call this once to check initial state if needed
         createFloatingHearts();
         smoothScroll();
         testWhatsAppButton();
-
-        // Add some initial delay for first section
-        setTimeout(() => {
-          document.querySelector(".opening .fade-in").classList.add("active");
-        }, 500);
       });
 
       // Add touch events for mobile
